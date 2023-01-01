@@ -1,0 +1,32 @@
+eureka:
+  client:
+    service-url:
+      default-zone: http://EUREKA-REGISTRY
+
+     
+
+     
+
+spring:
+  cloud:
+    gateway:
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+              allowedOrigins: "*"
+              allowedMethods: "*"
+              allowedHeaders: "*"
+      routes:
+      - id: mobilestore-crud-service
+        uri: lb://MOBILE-STORE-CRUD-SERVICE
+        predicates:
+        - Path=/mobile-cud-api/**
+      - id: mobilestore-get-service
+        uri: lb://MOBILE-STORE-GET-API
+        predicates:
+        - Path=/mobile-get-api/**
+        
+
+
