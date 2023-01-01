@@ -22,7 +22,7 @@ spring:
       - id: mobilestore-crud-service
         uri: lb://MOBILE-STORE-CRUD-SERVICE
         predicates:
-        - Path=/mobile-cud-api/**
+        - Path=/mobile-crud-api/**
       - id: mobilestore-get-service
         uri: lb://MOBILE-STORE-GET-API
         predicates:
