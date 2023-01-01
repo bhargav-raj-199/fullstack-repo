@@ -24,7 +24,7 @@ spring:
         predicates:
         - Path=/mobile-crud-api/**
       - id: mobilestore-get-service
-        uri: lb://MOBILE-STORE-GET-API
+        uri: lb://MOBILE-STORE-GET-SERVICE
         predicates:
         - Path=/mobile-get-api/**
         
