@@ -6,3 +6,9 @@ spring:
           issuer-uri : http://localhost:8080/realms/mobile-store
 server:
   port: 8081
+
+collection: mobiles
+database: mobiledb
+host: localhost
+port: 8529
+user: root
